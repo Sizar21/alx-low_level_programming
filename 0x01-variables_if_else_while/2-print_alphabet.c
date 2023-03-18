@@ -1,30 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
- * main - Determine if a random number is positive, negative or zero.
+ * main - prints the alphabet in lowercase.
 (*
  * Return: 0 on success
  */
 int main(void)
 {
-	int n;
+	char c = 'a';
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-
-	if (n < 0)
+	while (c <= 'z')
 	{
-		printf("%d is %s\n", n, "negative");
+		putchar(c);
+		c++;
 	}
-	else if (n > 0)
-	{
-		printf("%d is %s\n", n, "positive");
-	}
-	else
-	{
-		printf("%d is %s\n", n, "zero");
-	}
+	putchar('\n');
 	return (0);
-
 }
